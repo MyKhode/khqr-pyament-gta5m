@@ -1,8 +1,8 @@
 from pydantic import BaseSettings
 
-
 class Settings(BaseSettings):
     BAKONG_DEV_TOKEN: str
+    BAKONG_BANK_ACCOUNT: str  # Add this line to store the bank account
     BAKONG_MERCHANT_NAME: str = "Example Merchant"
     BAKONG_MERCHANT_CITY: str = "Phnom Penh"
     BAKONG_APP_NAME: str = "Example App"
@@ -13,6 +13,5 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
-
 
 settings = Settings()

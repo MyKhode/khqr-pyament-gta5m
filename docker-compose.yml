@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "9006:9006"
+    env_file:
+      - .env
+    restart: always
